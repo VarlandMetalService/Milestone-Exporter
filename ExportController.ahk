@@ -115,8 +115,119 @@ Gui, Add, Text, x12 y360 w440 h20 vLabel2, Select date range for export:
 Gui, Add, Button, x385 y420 w100 h30 gTestButtonClick vTestButton, &Test Export
 Gui, Add, Button, x492 y420 w100 h30 gStartButtonClick vStartButton, Start &Export
 Gui, Add, Text, x12 y425 w350 h20 vMessage,
+Menu, CameraMenu, Add, Select All`tCtrl+A, MenuSelectAll
+Menu, CameraMenu, Add, Select MSD`tCtrl+M, MenuSelectMSD
+Menu, CameraMenu, Add
+Menu, CameraMenu, Add, Deselect All`tCtrl+D, MenuDeselectAll
+Menu, MyMenuBar, Add, Camera, :CameraMenu
+Gui, Menu, MyMenuBar
 GuiControl, Disable, StartButton
 Gui, Show, w604 h485, Milestone Export Controller
+Return
+
+MenuDeselectAll:
+Control, UnCheck, , BNA Back
+Control, UnCheck, , BNA Load (Pano)
+Control, UnCheck, , BNA Unload (Pano)
+Control, UnCheck, , Dept. 3A Back (Pano)
+Control, UnCheck, , Dept. 3A Front (Pano)
+Control, UnCheck, , Dept. 3B + EN Back
+Control, UnCheck, , Dept. 3B + EN Front (Pano)
+Control, UnCheck, , Dept. 5 Back
+Control, UnCheck, , Dept. 5 Front (Pano)
+Control, UnCheck, , Dept. 5 Operator (Full)
+Control, UnCheck, , Front Door
+Control, UnCheck, , Hot Room (Full)
+Control, UnCheck, , Maintenance - Entrance
+Control, UnCheck, , Maintenance - Shop (Pano)
+Control, UnCheck, , Mezzanine - Aisle Stairway
+Control, UnCheck, , Mezzanine - Back Stairway
+Control, UnCheck, , Mezzanine - Interior Stairway
+Control, UnCheck, , Old Lab
+Control, UnCheck, , Outside - Employee Entrance (Full)
+Control, UnCheck, , Outside - Gazebo (Full)
+Control, UnCheck, , Outside - Parking Lot (Pano)
+Control, UnCheck, , Outside - Shipping (Pano)
+Control, UnCheck, , Outside - Transformer (Full)
+Control, UnCheck, , Outside - Warehouse (Pano)
+Control, UnCheck, , Plant Front (Full)
+Control, UnCheck, , Robot Back
+Control, UnCheck, , Robot Front (Pano)
+Control, UnCheck, , Shipping - Dock Doors
+Control, UnCheck, , Shipping (Pano)
+Control, UnCheck, , Visitor Hallway
+Control, UnCheck, , Warehouse - Back (Full)
+Control, UnCheck, , Warehouse - QC2 (Full)
+Return
+
+MenuSelectAll:
+Control, Check, , BNA Back
+Control, Check, , BNA Load (Pano)
+Control, Check, , BNA Unload (Pano)
+Control, Check, , Dept. 3A Back (Pano)
+Control, Check, , Dept. 3A Front (Pano)
+Control, Check, , Dept. 3B + EN Back
+Control, Check, , Dept. 3B + EN Front (Pano)
+Control, Check, , Dept. 5 Back
+Control, Check, , Dept. 5 Front (Pano)
+Control, Check, , Dept. 5 Operator (Full)
+Control, Check, , Front Door
+Control, Check, , Hot Room (Full)
+Control, Check, , Maintenance - Entrance
+Control, Check, , Maintenance - Shop (Pano)
+Control, Check, , Mezzanine - Aisle Stairway
+Control, Check, , Mezzanine - Back Stairway
+Control, Check, , Mezzanine - Interior Stairway
+Control, Check, , Old Lab
+Control, Check, , Outside - Employee Entrance (Full)
+Control, Check, , Outside - Gazebo (Full)
+Control, Check, , Outside - Parking Lot (Pano)
+Control, Check, , Outside - Shipping (Pano)
+Control, Check, , Outside - Transformer (Full)
+Control, Check, , Outside - Warehouse (Pano)
+Control, Check, , Plant Front (Full)
+Control, Check, , Robot Back
+Control, Check, , Robot Front (Pano)
+Control, Check, , Shipping - Dock Doors
+Control, Check, , Shipping (Pano)
+Control, Check, , Visitor Hallway
+Control, Check, , Warehouse - Back (Full)
+Control, Check, , Warehouse - QC2 (Full)
+Return
+
+MenuSelectMSD:
+Control, Check, , BNA Back
+Control, Check, , BNA Load (Pano)
+Control, Check, , BNA Unload (Pano)
+Control, Check, , Dept. 3A Back (Pano)
+Control, Check, , Dept. 3A Front (Pano)
+Control, Check, , Dept. 3B + EN Back
+Control, Check, , Dept. 3B + EN Front (Pano)
+Control, Check, , Dept. 5 Back
+Control, Check, , Dept. 5 Front (Pano)
+Control, Check, , Dept. 5 Operator (Full)
+Control, UnCheck, , Front Door
+Control, UnCheck, , Hot Room (Full)
+Control, UnCheck, , Maintenance - Entrance
+Control, UnCheck, , Maintenance - Shop (Pano)
+Control, Check, , Mezzanine - Aisle Stairway
+Control, Check, , Mezzanine - Back Stairway
+Control, Check, , Mezzanine - Interior Stairway
+Control, Check, , Old Lab
+Control, UnCheck, , Outside - Employee Entrance (Full)
+Control, UnCheck, , Outside - Gazebo (Full)
+Control, UnCheck, , Outside - Parking Lot (Pano)
+Control, UnCheck, , Outside - Shipping (Pano)
+Control, UnCheck, , Outside - Transformer (Full)
+Control, UnCheck, , Outside - Warehouse (Pano)
+Control, Check, , Plant Front (Full)
+Control, Check, , Robot Back
+Control, Check, , Robot Front (Pano)
+Control, UnCheck, , Shipping - Dock Doors
+Control, UnCheck, , Shipping (Pano)
+Control, UnCheck, , Visitor Hallway
+Control, UnCheck, , Warehouse - Back (Full)
+Control, UnCheck, , Warehouse - QC2 (Full)
 Return
 
 GuiClose:
